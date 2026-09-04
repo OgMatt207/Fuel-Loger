@@ -1,0 +1,68 @@
+﻿<Window x:Class="Fuel_Loger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fuel_Loger"
+        mc:Ignorable="d"
+        Title="Fuel Loger" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontSize="24
+                 ">Fuel Logger</TextBox>
+
+        <Border Grid.Column="1" Grid.Row="2" Background="DimGray" CornerRadius="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Fuel Log Stuff-->
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80*"/>
+                        <RowDefinition Height="20*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--DataGrid-->
+                    
+                    <!--Buttons for Logs-->
+                    <UniformGrid Columns="3" Rows="1" Grid.Row="1">
+                        <Button Name="btnAdd">Add</Button>
+                        <Button Name="btnRemove">Remove</Button>
+                        <Button Name="btnSave">Save</Button>
+                    </UniformGrid>
+                </Grid>
+                
+                <!--Statitics-->
+                <Border Grid.Column="1" Background="DarkGray" CornerRadius="25">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                            <RowDefinition Height="25*"/>
+                            <RowDefinition Height="70*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">Stats</TextBlock>
+                        
+                    </Grid>
+                </Border>
+
+                </Grid>
+        </Border>
+        
+    </Grid>
+</Window>
