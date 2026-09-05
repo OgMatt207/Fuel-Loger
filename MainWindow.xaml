@@ -38,12 +38,21 @@
                     </Grid.RowDefinitions>
                     
                     <!--DataGrid-->
+                    <ListView Name="lvLogs" Grid.Column="0" Grid.Row="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Date" DisplayMemberBinding="{Binding LogDate}"></GridViewColumn>
+                                <GridViewColumn Header="Amount" DisplayMemberBinding="{Binding Litres}"></GridViewColumn>
+                                <GridViewColumn Header="Cost" DisplayMemberBinding="{Binding Cost}"></GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                     
                     <!--Buttons for Logs-->
                     <UniformGrid Columns="3" Rows="1" Grid.Row="1">
-                        <Button Name="btnAdd">Add</Button>
-                        <Button Name="btnRemove">Remove</Button>
-                        <Button Name="btnSave">Save</Button>
+                        <Button Name="btnAdd" Click="btnAdd_Click">Add</Button>
+                        <Button Name="btnRemove" Click="btnRemove_Click">Remove</Button>
+                        <Button Name="btnSave" Click="btnSave_Click">Save</Button>
                     </UniformGrid>
                 </Grid>
                 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Fuel_Loger
 {
-    internal class FuelLog
+    public class FuelLog
     {
         public DateTime LogDate { get; set; }
         public float Litres {  get; set; }
